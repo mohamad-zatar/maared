@@ -39,13 +39,19 @@ class CarResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('title')
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('start_time')
                     ->dateTime()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('end_time')
                     ->dateTime()
+                    ->formatState('Y-m-d H:i:s')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('auction_id')
+                Tables\Columns\TextColumn::make('start_price')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('current_price')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')

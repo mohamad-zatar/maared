@@ -27,6 +27,9 @@ class SettingsSeeder extends Seeder
             'service_fee_percentage' => 5.00,
             'tax_rate' => 0.00,
             'website_title' => 'Auction Yard',
+            'auction_start_time' => '04:00',
+            'auction_end_time' => '21:00',
+            'each_auction_minutes' => 5,
         ]);
     }
 }

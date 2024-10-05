@@ -24,8 +24,10 @@ class StoreCarRequest extends FormRequest
         return [
             'title' => 'required|string|max:255',
             'start_price' => 'required|numeric|gt:0',
-            'start_time' => 'required|date|date_format:Y-m-d H:i:s',
-            'end_time' => 'required|date|after:start_time|date_format:Y-m-d H:i:s',
+            'sale_price' => 'required|numeric|gt:0',
+            'auction_day' => 'required|date'
+//            'start_time' => 'required|date|date_format:Y-m-d H:i:s',
+//            'end_time' => 'required|date|after:start_time|date_format:Y-m-d H:i:s',
         ];
     }
 }
